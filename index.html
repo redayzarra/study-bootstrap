@@ -493,8 +493,10 @@
               </div>
             </form>
           </div>
+
+          <!--Modal Footer-->
+
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
@@ -520,6 +522,13 @@
       center: [-71.3247, 42.6553],
       zoom: 16,
       });
+
+    window.onload = function(){
+    document.getElementById('enroll').onclick = function(){
+        this.parentNode.parentNode.remove();
+        return false;
+    };
+};
     </script>
   </body>
 </html>

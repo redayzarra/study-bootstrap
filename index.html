@@ -6,28 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Implementation of Bootstrap -->
+<!-- Implementation of Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"> <!--Link to the custom style sheet to seperate our CSS from HTML-->
 
-    <title>Showcase with Flex Classes</title> <!--Title the document to show up on the tab-->
+    <title>Personal Website</title> <!--Title the document to show up on the tab-->
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top"> <!--Implements the navbar, expand is set to large meaning that it will only expand when the screensize is large, otherwise it will remain a hamburger menu. Bg is set to dark meaning the background is dark. Navbar dark makes the text light, because the navbar is dark-->
+
+<!-- Navbar -->
+
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top"> <!--Implements the navbar, expand is set to large meaning that it will only expand when the screensize is large, otherwise it will remain a hamburger menu. Bg is set to dark meaning the background is dark. Navbar dark makes the text light, because the navbar is dark-->
       <div class="container"> <!--The container makes it so that the branding is contained to a certain limit inside of the navbar-->
         <a href="#" class="navbar-brand">ReDay Zarra</a> <!--Adds the branding/heading on the navbar-->
 
         <!--Adds a button with a specified class that we can later call on, the type specifies that it is a button, and the data-bs-toggle tells the button to collapse something, and the target tells it what to collapse which is the navbar-->
+
         <button
           class="navbar-toggler" 
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navmenu"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span> <!--The span tag allows you to add text as an inline element so the text won't go to a completely different line-->
         </button>
+
+        <!--Contains the contents of the navbar, including the navbar id (navmenu) as well as all it's list items-->
 
         <div class="collapse navbar-collapse" id="navmenu"> <!--Creates a div that allows the navbar to collapse when the screen size reduces-->
           <ul class="navbar-nav ms-auto"> <!--The ul tag just creates an unordered list item, basically a bullet list. The ms-auto automatically puts the list items to the right most side-->
@@ -45,13 +50,23 @@
       </div>
     </nav>
 
-    <section class="bg-dark text-light p-5 text-center">
-      <div class="container">
-        <div class="d-sm-flex">
+<!-- Showcase -->
+
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" <!--The section tag just adds different sections to the page and is basically a bunch of chapters, headers, etc... Bg dark makes the background dark and the text light makes the text lighter (obvious). And p-5 adds a padding of 5 pixels on the section. The text-center just centers the text in the middle-->
+      <div class="container pt-5"> <!--Container to make sure the contents don't press up against the edge, adding padding top of 5 because the navbar was covering my content-->
+        <div class="d-sm-flex"> <!--The flex turns the two elements below, the heading and image, into a flex row (so they are in the same row). The sm specifies that the flex will only activate with sizes bigger than the small screen size-->
           <div>
-            <h1>Welcome to my website!</h1>
+            <h1>Welcome to 
+              <span class="text-warning"> <!--Makes it so that the text below is a different color-->
+                my website!
+              </span></h1> <!--Just means heading 1 and we are specifying the heading text-->
+              <p>
+                Biomedical Engineering and Computer Science Senior | SMMA Agency 
+                Owner | I study and teach biomedical engineering, machine learning, 
+                and web development.
+              </p>
           </div>
-          <img class="img-fluid w-5" src = "img/showcase.svg" alt=""/>
+          <img class="img-fluid w-50" src = "img/showcase.svg" alt=""/> <!--The img tag tells HTML that we are putting an image in, and the img-fluid class makes it so that the image is bound to the container and the w-50 makes it 50% of its original size. The src specifes what image we are putting in and the alt tag can be used to add an alternative text/desription to the image-->
         </div>
       </div>
     </section>

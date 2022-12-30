@@ -2,7 +2,6 @@
 Adds an empty (ghost) block before the body, so at the very top - under navbar, and
 it has no contents and its height is 60px
 */
-
 body::before {
   display: block;
   content: "";
@@ -10,10 +9,18 @@ body::before {
 }
 
 /*
+The code below is to setup the map for the MapBox
+*/
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/*
 The code below makes it so that the newsletter input bar becomes half its
 width after its larger than 768px
 */
-
 @media(min-width: 768px) {
   .news-input {
     width: 50%;

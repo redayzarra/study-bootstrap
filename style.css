@@ -1,3 +1,19 @@
+/*
+Adds an empty (ghost) block before the body, so at the very top - under navbar, and
+it has no contents and its height is 60px
+*/
+
+body::before {
+  display: block;
+  content: "";
+  height: 60px
+}
+
+/*
+The code below makes it so that the newsletter input bar becomes half its
+width after its larger than 768px
+*/
+
 @media(min-width: 768px) {
   .news-input {
     width: 50%;
